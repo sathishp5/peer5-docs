@@ -1,4 +1,3 @@
-#new
 
 # Welcome to MkDocs
 
