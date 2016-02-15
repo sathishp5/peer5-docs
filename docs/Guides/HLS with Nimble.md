@@ -4,7 +4,8 @@
 WMSPanel's Nimble is a fantastic lightweight media server.
 We are going to show how to configure Nimble and stream HLS with Peer5.
 
-<br/>
+
+
 
 ## Setup CORS 
 Peer5 needs CORS to get the video segments from your server:
