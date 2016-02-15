@@ -5,7 +5,7 @@ WMSPanel's Nimble is a fantastic lightweight media server.
 We are going to show how to configure Nimble and stream HLS with Peer5.
 
 
-### Setup CORS 
+## Setup CORS 
 Peer5 needs CORS to get the video segments from your server:
 
 * Open your config file (Usually located at "/etc/nimble/nimble.conf").
@@ -16,9 +16,9 @@ Peer5 needs CORS to get the video segments from your server:
 * Save the file.
 * Restart the nimble service using this command: "sudo service nimble restart".
 
-### Setup HLS Streams (from WMSPanel):
+# Setup HLS Streams (from WMSPanel):
 
-#### VOD
+## VOD
 * Copy the mp4 video file you want to stream to a path that will be accessible by the nimble user on your server, Lets say /var/www/video/ .
 * On the navigation panel: Nimble streamer -> Edit nimble routes.
 
@@ -33,7 +33,7 @@ Peer5 needs CORS to get the video segments from your server:
 * you can now play the url in your HLS player.
 
 	
-#### Live (RTMP transmuxing to HLS)
+## Live (RTMP transmuxing to HLS)
 
 * On the navigation panel: Nimble streamer -> Live streams settings.
 
