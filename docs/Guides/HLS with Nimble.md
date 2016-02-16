@@ -43,6 +43,14 @@ Peer5 needs CORS to get the video segments from your server:
 
 
 
+
+
+
+
+
+
+
+dsfa
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image00.png?raw=true)
 
 
