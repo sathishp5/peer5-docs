@@ -30,30 +30,14 @@ Peer5 needs CORS to get the video segments from your server:
 2. On the navigation panel: Nimble streamer -> Edit nimble routes.
 
 
-
-
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image01.png?raw=true)
-
-
 
 
 3. Select ADD VOD STREAMING ROUTE on the top right.
 4. Fill the form and press OK.
 
 
-
-
-
-
-
-
-
-
-
-dsfa
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image00.png?raw=true)
-
-
 
 
 5. your route will be added to the table, select GET URL for player, copy the url and replace sample.mp4 with your video file name. You might also need to replace the IP address with your server’s external IP.
@@ -67,62 +51,38 @@ dsfa
 1. On the navigation panel: Nimble streamer -> Live streams settings.
 
 
-
-
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image03.png?raw=true)
-
-
 
 
 2. Under Global tab -  Set chunk duration to 3 and Chunk count to 10. Then press Save.
 
 
-
-
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image06.png?raw=true)
-
-
 
 
 3. Select Live pull settings tab.
 
 
-
-
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image05.png?raw=true)
-
-
 
 
 4. Select Add RTMP URL.
 5. Fill your RTMP stream url, application name (i.e live) and name for your ouput stream. Then press Save.
 
 
-
-
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image07.png?raw=true)
-
-
 
 
 6. Go back to the top navigation bar and select Live streams.
 
 
-
-
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image04.png?raw=true)
-
-
 
 
 7. Choose your server from the list on the bottom.
 
 
-
-
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image08.png?raw=true)
-
-
 
 
 8. Click Outgoing stream (the pink part of the drawing), your stream should appear.
@@ -130,11 +90,7 @@ dsfa
 10. This window will appear:
 
 
-
-
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image02.png?raw=true)
-
-
 
 
 11. You might need to replace the IP address with the external address of your server.
