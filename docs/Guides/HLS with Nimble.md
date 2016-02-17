@@ -28,9 +28,9 @@ Peer5 needs CORS to get the video segments from your server:
 ## VOD
 1. Copy the mp4 video file you want to stream to a path that will be accessible by the nimble user on your server, Lets say /var/www/video/ .
 2. On the navigation panel: Nimble streamer -> Edit nimble routes.
-	<br/><br/>
+	<br/><br/><br/>
 	![](https://github.com/Peer5/mkdocs-base/blob/master/docs/Guides/images/nimble/image01.png?raw=true)
-	<br/><br/>
+	<br/><br/><br/>
 3. Select ADD VOD STREAMING ROUTE on the top right.
 4. Fill the form and press OK.
 	<br/>
