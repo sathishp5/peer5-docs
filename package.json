@@ -1,0 +1,10 @@
+{
+  "name": "peer5-docs",
+  "version": "0.0.1",
+  "description": "A documentation repo using mkdocs theme with netlify",
+  "scripts": {
+    "watch": "mkdocs serve",
+    "build": "mkdocs build --clean",
+    "setup-env": "sudo apt-get install -y pip && sudo pip install mkdocs && sudo pip install mkdocs-cinder"
+  }
+}
