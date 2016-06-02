@@ -1,47 +1,50 @@
-## Setting up HLS live streaming server using NGINX + nginx-rtmp-module on Ubuntu
+# Setting up HLS live streaming server using NGINX + nginx-rtmp-module on Ubuntu
 
-### Stages:
-
-1. compile nginx with rtmp module
-2. create nginx configuration file
-3. start nginx
-4. push the live stream using rtmp
-5. take the server for a test run!
-
+This guide will explain how to setup your own streaming server on ubuntu.
 
 ## 1. Compile nginx with rtmp module
 
 Firstly, we'll need to compile nginx with the nginx-rtmp-module.
 
-Even so that the original module can be found [here](https://github.com/arut/nginx-rtmp-module), there is a [fork](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module), that continues the development and adds fixes and improvements actively.  
- there for the fork is the recommended one.
+We recommend using [this](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) forked module, it's being actively worked on and contains more fixes and improvements over the [original one](https://github.com/arut/nginx-rtmp-module)
 
-Clone the module to a local directory
+__Clone nginx-rtmp-module__
 
     git clone https://github.com/sergey-dryabzhinsky/nginx-rtmp-module.git
 
-Install nginx dependencies
+__Install nginx dependencies__
 
     sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev
 
+__Download nginx__  
 latest nginx can be downloaded from [this page](http://nginx.org/en/download.html).  
 for example `nginx-1.10.1` can be downloaded from this link: [http://nginx.org/download/nginx-1.10.1.tar.gz](http://nginx.org/download/nginx-1.10.1.tar.gz) 
   
     wget http://nginx.org/download/nginx-1.10.1.tar.gz
     tar -xf nginx-1.10.1.tar.gz
     cd nginx-1.10.1
-  
-notice the `--add-module=../nginx-rtmp-module` argument, the path must point correctly to the cloned module
-    
+
+__Compile nginx__
+
     ./configure --with-http_ssl_module --add-module=../nginx-rtmp-module
     make -j 1
     sudo make install
     
-* replace -j 1 with the amount of cpu's on your computer to accelerate the compilation
+- notice the `--add-module=../nginx-rtmp-module` argument, the path must point correctly to the cloned module
+- (optional) replace -j 1 with the amount of cpu's on your computer to accelerate the compilation
+  
+
 
 ## 2. create nginx configuration file
 
-rtmp module config part
+__rtmp module config__
+
+An application in nginx means an rtmp endpoint  
+basic uri syntax: `rtmp://nginx_host[:nginx_port]/app_name/stream_name`  
+we will be using `stream` as our stream name so our endpoint will be: `rtmp://localhost/show/stream`
+Which will later be available as `http://localhost:8080/hls/stream.m3u8`
+
+For good HLS experience we recommend using 3 seconds fragments with 60 seconds playlist.  
 
 ```
 rtmp {
@@ -54,6 +57,8 @@ rtmp {
             # Turn on HLS
             hls on;
             hls_path /mnt/hls/;
+            hls_fragment 3;
+            hls_playlist_length 60;
             # disable consuming the stream from nginx as rtmp
             deny play all;
         }
@@ -61,12 +66,11 @@ rtmp {
 }
 ```
 
-Note that the example points `/mnt/hls/` as the target path.  
-change this to a different directory but make sure that nginx have **write permissions**.  
-to fix permissions you can use this command:
+Note that the example points `/mnt/hls/` as the target path for the hls playlist and video files.  
+you can change this to a different directory but make sure that nginx have **write permissions**.  
 
-    chown -R nginx:nginx /mnt/hls
 
+__http server config__
 
 since hls consists of static files, a simple http server can be set up with two additions, correct MIME types and CORS headers.
 
@@ -104,9 +108,10 @@ server {
 ```
 
 
+__the complete nginx.conf__
+
 The default location for nginx conf is `/usr/local/nginx/conf/nginx.conf` or `/etc/nginx/nginx.conf`
 
-the complete nginx.conf
 ```
 worker_processes  auto;
 events {
@@ -124,6 +129,10 @@ rtmp {
             # Turn on HLS
             hls on;
             hls_path /mnt/hls/;
+            hls_fragment 3;
+            hls_playlist_length 60;
+            # disable consuming the stream from nginx as rtmp
+            deny play all;
         }
     }
 }
@@ -193,11 +202,31 @@ kill nginx
     nginx -s stop
 
 
-## 4. push live stream to nginx using rtmp
+## 4. Pushing live stream to nginx using rtmp
 
 nginx accepts rtmp stream as input.
 For a proper HLS stream the video codec should be [`x264`](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC) and audio codec `aac`/`mp3`/`ac3` most commonly being `aac`.
+
+### Options 1: From existing rtmp stream already in h264
  
+ if you have an existing rtmp stream in the correct codec, you can skip ffmpeg and tell nginx to pull the stream directly.
+ In order to do so add a `pull` directive under `application` section in nginx.conf like so:
+ 
+```
+application show {
+    live on;
+    pull rtmp://example.com:4567/sports/channel3 live=1;
+    # to change the local stream name use this syntax: ... live=1 name=ch3; 
+
+    # other directives...
+    # hls_...
+}
+            
+```
+read on more available options [here](https://github.com/arut/nginx-rtmp-module/wiki/Directives#pull)
+ 
+### Options 2: From local webcam/different rtmp/file
+
 To achieve the stream encoding and muxing we will use the almighty [ffmpeg](http://ffmpeg.org/).
 
 To install ffmpeg using PPA run these commands
@@ -205,7 +234,6 @@ To install ffmpeg using PPA run these commands
     sudo add-apt-repository ppa:mc3man/trusty-media
     sudo apt-get update
     sudo apt-get install ffmpeg
-
 
 There are several source from which you can produce an rtmp stream. here are couple examples:
 update `localhost` to your nginx server ip/domain
@@ -225,7 +253,6 @@ Capture webcam on `/dev/video0` and stream it to nginx
 -  `rtmp://localhost/show/stream` - rtmp endpoint to stream to. if the target port is not `1935` is should be included in the uri.  
  the last path component is the stream name - that means that multiple channels can be pushed using different names
 
-
 Stream file example-vid.mp4
 
      ffmpeg -re -i example-vid.mp4 -vcodec libx264 -vprofile baseline -g 30 -acodec aac -strict -2 -f flv rtmp://localhost/show/stream
@@ -238,7 +265,7 @@ Stream another rtmp stream
 
 now that we are pushing our stream into nginx, a manifest file in the format `stream-name.m3u8` is created in the target folder along with the video fragments.
 
-for our example the manifest is available at: `http://localhost:8080/hls/stream.m3u8` since out rtmp path ends with the name `stream`.
+for our example the manifest is available at: `http://localhost:8080/hls/stream.m3u8`.
 
 for testing our new HLS live stream we will use [videojs5](http://videojs.com/).
 
@@ -264,8 +291,8 @@ player.html
 ```
 
 
-with Peer5 plugin
-get your API key [here](https://app.peer5.com)
+With Peer5 plugin
+get your API key [here](https://app.peer5.com/register)
 
 ```html
 <!DOCTYPE html>
