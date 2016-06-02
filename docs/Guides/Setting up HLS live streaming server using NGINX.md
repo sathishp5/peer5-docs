@@ -291,7 +291,7 @@ player.html
 ```
 
 
-With Peer5 plugin
+With Peer5 plugin  
 get your API key [here](https://app.peer5.com/register)
 
 ```html
