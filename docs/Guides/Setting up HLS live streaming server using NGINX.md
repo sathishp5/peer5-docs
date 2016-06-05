@@ -6,7 +6,7 @@ This guide will explain how to setup your own streaming server on ubuntu.
 
 Firstly, we'll need to compile nginx with the nginx-rtmp-module.
 
-We recommend using [this](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) forked module, it's being actively worked on and contains more fixes and improvements over the [original one](https://github.com/arut/nginx-rtmp-module)
+We recommend using [this](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) forked module. it's being actively worked on and contains more fixes and improvements over the [original one](https://github.com/arut/nginx-rtmp-module)
 
 __Clone nginx-rtmp-module__
 
@@ -17,7 +17,7 @@ __Install nginx dependencies__
     sudo apt-get install build-essential libpcre3 libpcre3-dev libssl-dev
 
 __Download nginx__  
-latest nginx can be downloaded from [this page](http://nginx.org/en/download.html).  
+Latest nginx can be downloaded from [this page](http://nginx.org/en/download.html).  
 for example `nginx-1.10.1` can be downloaded from this link: [http://nginx.org/download/nginx-1.10.1.tar.gz](http://nginx.org/download/nginx-1.10.1.tar.gz) 
   
     wget http://nginx.org/download/nginx-1.10.1.tar.gz
@@ -30,18 +30,18 @@ __Compile nginx__
     make -j 1
     sudo make install
     
-- notice the `--add-module=../nginx-rtmp-module` argument, the path must point correctly to the cloned module
-- (optional) replace -j 1 with the amount of cpu's on your computer to accelerate the compilation
+- Notice the `--add-module=../nginx-rtmp-module` argument, the path must point correctly to the cloned module
+- (Optional) replace -j 1 with the amount of cpu's on your computer to accelerate the compilation
   
 
 
-## 2. create nginx configuration file
+## 2. Create nginx configuration file
 
 __rtmp module config__
 
 An application in nginx means an rtmp endpoint  
-basic uri syntax: `rtmp://nginx_host[:nginx_port]/app_name/stream_name`  
-we will be using `stream` as our stream name so our endpoint will be: `rtmp://localhost/show/stream`
+Basic uri syntax: `rtmp://nginx_host[:nginx_port]/app_name/stream_name`  
+We will be using `stream` as our stream name so our endpoint will be: `rtmp://localhost/show/stream`
 Which will later be available as `http://localhost:8080/hls/stream.m3u8`
 
 For good HLS experience we recommend using 3 seconds fragments with 60 seconds playlist.  
@@ -67,12 +67,12 @@ rtmp {
 ```
 
 Note that the example points `/mnt/hls/` as the target path for the hls playlist and video files.  
-you can change this to a different directory but make sure that nginx have **write permissions**.  
+You can change this to a different directory but make sure that nginx have **write permissions**.  
 
 
 __http server config__
 
-since hls consists of static files, a simple http server can be set up with two additions, correct MIME types and CORS headers.
+Since hls consists of static files, a simple http server can be set up with two additions, correct MIME types and CORS headers.
 
 ```
 server {
@@ -179,25 +179,25 @@ http {
 
 ```
 
-## 3. start nginx
+## 3. Start nginx
 
-test the configuration file
+Test the configuration file
 
     nginx -t
 
-start nginx in the background
+Start nginx in the background
 
     nginx
     
-start nginx in the foreground
+Start nginx in the foreground
 
     nginx -g 'daemon off;'
     
-reload the config on the go
+Reload the config on the go
 
     nginx -t && nginx -s reload
 
-kill nginx
+Kill nginx
     
     nginx -s stop
 
@@ -223,7 +223,7 @@ application show {
 }
             
 ```
-read on more available options [here](https://github.com/arut/nginx-rtmp-module/wiki/Directives#pull)
+Read on more available options [here](https://github.com/arut/nginx-rtmp-module/wiki/Directives#pull)
  
 ### Options 2: From local webcam/different rtmp/file
 
@@ -236,7 +236,7 @@ To install ffmpeg using PPA run these commands
     sudo apt-get install ffmpeg
 
 There are several source from which you can produce an rtmp stream. here are couple examples:
-update `localhost` to your nginx server ip/domain
+Update `localhost` to your nginx server ip/domain
 
 Capture webcam on `/dev/video0` and stream it to nginx
 
@@ -251,7 +251,7 @@ Capture webcam on `/dev/video0` and stream it to nginx
 -  `-strict` - allow using the experimental aac codec
 -  `-f` - specify format to output
 -  `rtmp://localhost/show/stream` - rtmp endpoint to stream to. if the target port is not `1935` is should be included in the uri.  
- the last path component is the stream name - that means that multiple channels can be pushed using different names
+ The last path component is the stream name - that means that multiple channels can be pushed using different names
 
 Stream file example-vid.mp4
 
@@ -261,13 +261,13 @@ Stream another rtmp stream
 
      ffmpeg -i rtmp://example.com/appname/streamname -vcodec libx264 -vprofile baseline -acodec aac -strict -2 -f flv rtmp://localhost/show/stream
 
-## 5. take the server for a test run!
+## 5. Take the server for a test run!
 
-now that we are pushing our stream into nginx, a manifest file in the format `stream-name.m3u8` is created in the target folder along with the video fragments.
+Now that we are pushing our stream into nginx, a manifest file in the format `stream-name.m3u8` is created in the target folder along with the video fragments.
 
-for our example the manifest is available at: `http://localhost:8080/hls/stream.m3u8`.
+For our example, the manifest is available at: `http://localhost:8080/hls/stream.m3u8`.
 
-for testing our new HLS live stream we will use [videojs5](http://videojs.com/).
+For testing our new HLS live stream we will use [videojs5](http://videojs.com/).
 
 player.html
 ```html
@@ -290,9 +290,7 @@ player.html
 </html>
 ```
 
-
-With Peer5 plugin  
-get your API key [here](https://app.peer5.com/register)
+With Peer5 plugin (get your API key [here](https://app.peer5.com/register)):
 
 ```html
 <!DOCTYPE html>
@@ -322,4 +320,4 @@ get your API key [here](https://app.peer5.com/register)
 </html>
 ```
 
-Its alive!
+It's alive!
