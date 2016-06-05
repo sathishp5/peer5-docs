@@ -1,4 +1,4 @@
-<img src="./images/logo.png" style="width:200px;float:right;margin-top:15px;" />
+<img class="logo" src="./images/logo.png" />
 
 ## Peer5 docs
 
@@ -12,3 +12,4 @@
     - [HLS with Nimble](./Guides/HLS with Nimble/)
     - [How to optimize Wowza server](./Guides/How to optimize Wowza server/)
     - [Setting up HLS live streaming server using NGINX](./Guides/Setting up HLS live streaming server using NGINX/)
+    - [Setting up CORS](./Guides/CORS/)
