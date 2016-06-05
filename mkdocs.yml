@@ -1,2 +1,15 @@
 site_name: Peer5 Docs
 theme_dir: 'cinder'
+repo_url: https://github.com/peer5/peer5-docs
+pages:
+- Home: 'index.md'
+- Overview: 'Overview.md'
+- Players:
+    - 'Clappr': 'Players/Clappr.md'
+    - 'VideoJS': 'Players/VideoJS.md'
+    - 'JWPlayer': 'Players/JWPlayer 7.md'
+    - 'Shaka Player': 'Players/Shaka Player.md'
+- Guides:
+    - 'HLS with Nimble': 'Guides/HLS with Nimble.md'
+    - 'How to optimize Wowza server': 'Guides/How to optimize Wowza server.md'
+    - 'Setting up HLS live streaming server using NGINX': 'Guides/Setting up HLS live streaming server using NGINX.md'

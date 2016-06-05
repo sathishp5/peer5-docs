@@ -1,25 +1,14 @@
+<img src="./images/logo.png" style="width:200px;float:right;margin-top:15px;" />
 
-# Welcome to Peer5 Documentation Site
+## Peer5 docs
 
-## What is Peer5
-
-
-## Registration
-
-Please see https://app.peer5.com
-
-## Getting Started
-After signing up, you should be able to see the interactive guide.
-
-### Video protocols
-
-HLS
-DASH
-MP4
-
-
-### Players
-
-### Servers
-
-### Testing
+- [**Overview**](./Overview)
+- **Players**
+    - [Clapper](./Players/Clappr/)
+    - [VideoJS](./Players/VideoJS/)
+    - [JWPlayer](./Players/JWPlayer%207/)
+    - [Shaka Player](Players/Shaka%20Player/)
+- **Guides**
+    - [HLS with Nimble](./Guides/HLS with Nimble/)
+    - [How to optimize Wowza server](./Guides/How to optimize Wowza server/)
+    - [Setting up HLS live streaming server using NGINX](./Guides/Setting up HLS live streaming server using NGINX/)
