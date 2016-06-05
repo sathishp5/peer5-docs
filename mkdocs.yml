@@ -1,8 +1,6 @@
 site_name: Peer5 Docs
 theme_dir: 'cinder'
 repo_url: https://github.com/peer5/peer5-docs
-extra_script:
-  - js/extra.js
 pages:
 - Home: 'index.md'
 - Overview: 'Overview.md'
