@@ -1,3 +1,3 @@
-# mkdocs-base
+# Peer5 documentation
 
-A documentation repo using mkdocs theme with netlify
+Visit the full site at [https://docs.peer5.com](https://docs.peer5.com)

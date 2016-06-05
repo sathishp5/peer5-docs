@@ -19,10 +19,10 @@ Since Peer5 is SaaS and uses only Javascript, the integration is seamless to the
 Client side integration depends on the player you are using. and usually means adding one or two lines of code to your page.  
 we support many common such as:
 
-- [JWPlayer](./JWPlayer%207)
-- [VideoJS](./VideoJS)
-- [Clapper](./Clapper)
-- [Shaka Player](./Shaka%20Player)
+- [Clapper](./Players/Clappr/)
+- [VideoJS](./Players/VideoJS/)
+- [JWPlayer](./Players/JWPlayer%207/)
+- [Shaka Player](Players/Shaka%20Player/)
 
 please visit [Our integration page](https://app.peer5.com/integration) for assistance
 Or contact us if our current solutions doesn't fit your needs
@@ -114,11 +114,11 @@ Peers from different renditions do not share segments with each other.
 
 ## Supported Platforms
 
-### Browsers
+### # Browsers
 Peer5 operates with complete p2p functionality on Chrome, Firefox and Opera.
  Other browsers gracefully fallback to an HTTP only mode, where servers deliver all of the content.
 
-### Mobile
+### # Mobile
 Peer5 is extremely UX focused, and for that reason, we only enable the download of content on mobile (i.e., no upload).
  We do this in order to optimize streams and minimize resource usage. 
 

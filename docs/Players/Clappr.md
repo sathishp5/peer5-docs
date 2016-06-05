@@ -1,7 +1,7 @@
 # Boosting Clappr with Peer5
-
+<br>
 ![](./images/clappr.png)
-
+<br><br>
 [Clappr](http://clappr.io/) is a free and open source HTML5 video player that supports HLS.
 
 The integration with Peer5 plugin is as easy as it can get.
