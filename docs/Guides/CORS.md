@@ -7,23 +7,28 @@ for best performance it is required that your video server will respond with the
 
 `GET`
 
-- `'Access-Control-Allow-Origin'`: `'*'`
-- `'Access-Control-Expose-Headers'`: `'Content-Length, Content-Range'`
+  - `'Access-Control-Allow-Origin'`: `'*'`
+  - `'Access-Control-Expose-Headers'`: `'Content-Length, Content-Range'`
+
 ---
+
 `HEAD`
 
-- `'Access-Control-Allow-Origin'`: `'*'`
-- `'Access-Control-Expose-Headers'`: `'Content-Length'`
+  - `'Access-Control-Allow-Origin'`: `'*'`
+  - `'Access-Control-Expose-Headers'`: `'Content-Length'`
+
 ---
 
 `OPTIONS`  
 <small>options requests (sometime called preflight) are performed in many common browsers like Chrome and Firefox.</small>
   
-- `'Access-Control-Allow-Origin'`: `'*'`
-- `'Access-Control-Allow-Methods'`: `'GET, HEAD, OPTIONS'`
-- `'Access-Control-Allow-Headers'`: `'Range'`
-- `'Content-Length'`: `'0'`  
+  - `'Access-Control-Allow-Origin'`: `'*'`
+  - `'Access-Control-Allow-Methods'`: `'GET, HEAD, OPTIONS'`
+  - `'Access-Control-Allow-Headers'`: `'Range'`
+  - `'Content-Length'`: `'0'`  
+    
 status: `200` | `204`
+
 ---
 
 ### Common servers examples
@@ -34,6 +39,6 @@ status: `200` | `204`
 - [varnish](https://github.com/Peer5/peer5-cors-config/tree/master/varnish)
 
 
-<br>
+<br/>
 **Having problems?**  
 <a href="javascript:Intercom('show')">Chat with us</a> or [send us an email](mailto:info@peer5.com)
