@@ -7,13 +7,12 @@
 The integration with Peer5 plugin is easy and involves few lines of Javascript.
 In addition to the player script, include Peer5 client and the Clappr plugin.
  
-##Peer5 client and plugins scripts
+## Peer5 client and plugins scripts
 
      <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-     <script src="//api.peer5.com/clappr.js"></script>
- 
+     <script src="//api.peer5.com/peer5.clappr.plugin.js"></script>
 
-##Complete Example
+## Complete Example
  
 The following information needs to be filled according to your actual data:
  
@@ -46,3 +45,5 @@ The following information needs to be filled according to your actual data:
     </body>
     </html>
 ```
+
+visit [here](https://github.com/clappr/clappr) for the full Clappr docs 

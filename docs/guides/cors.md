@@ -1,8 +1,10 @@
 ## Cross Origin Resource Sharing (CORS)
  
-[CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) is a security mechanism embedded in modern browsers that prevents hijacking resources from servers that have different domains.  
+[CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) Cross-origin resource sharing (CORS)
+is a mechanism that allows restricted resources (e.g. fonts) on a web page 
+to be requested from another domain outside the domain from which the resource originated.
  
-Peer5 performs requests from your video page to your video server,  
+**Peer5** performs requests from your video page to your video server,  
 for best performance it is required that your video server will respond with the following headers per request type:
 
 `GET`

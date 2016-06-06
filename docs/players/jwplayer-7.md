@@ -1,4 +1,4 @@
-# Boosting JWPlayer 7 with Peer5
+# JWPlayer 7 with Peer5 for HLS integration
 
 ![](./images/jwplayer.jpg)
 
@@ -8,12 +8,12 @@ The integration with Peer5 plugin is as easy as it can get.
 
 In addition to the player script, include Peer5 client and JWPlayer plugin.
  
-Peer5 client and plugins scripts
+## Peer5 client and plugins scripts
 
      <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
      <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
     
-**Complete Example** 
+## Complete Example 
  
 The following information needs to be filled according to your actual data:
  
@@ -51,3 +51,5 @@ The following information needs to be filled according to your actual data:
     </body>
     </html>
 ```
+
+visit [here](https://developer.jwplayer.com/jw-player/) for the full JWPlayer docs
