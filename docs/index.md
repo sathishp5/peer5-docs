@@ -2,7 +2,7 @@
 
 ## Peer5 docs
 
-- [**Overview**](./overview)
+- [**Overview**](overview)
 - **Players**
     - [Clapper](players/clappr/)
     - [VideoJS](players/videojs/)
