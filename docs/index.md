@@ -1,14 +1,15 @@
-<img src="./images/logo.png" style="width:200px;float:right;margin-top:15px;" />
+<img class="logo" src="./images/logo.png" />
 
 ## Peer5 docs
 
-- [**Overview**](./Overview)
+- [**Overview**](overview)
 - **Players**
-    - [Clapper](./Players/Clappr/)
-    - [VideoJS](./Players/VideoJS/)
-    - [JWPlayer](./Players/JWPlayer%207/)
-    - [Shaka Player](Players/Shaka%20Player/)
+    - [Clapper](players/clappr/)
+    - [VideoJS](players/videojs/)
+    - [JWPlayer](players/jwplayer-7/)
+    - [Shaka Player](players/shaka-player/)
 - **Guides**
-    - [HLS with Nimble](./Guides/HLS with Nimble/)
-    - [How to optimize Wowza server](./Guides/How to optimize Wowza server/)
-    - [Setting up HLS live streaming server using NGINX](./Guides/Setting up HLS live streaming server using NGINX/)
+    - [HLS with Nimble](guides/hls-with-nimble/)
+    - [How to optimize Wowza server](guides/how-to-optimize-wowza-server/)
+    - [Setting up HLS live streaming server using NGINX](guides/setting-up-hls-live-streaming-server-using-nginx/)
+    - [Setting up CORS](guides/cors/)

@@ -1,4 +1,4 @@
-# Boosting VideoJS with Peer5
+# VideoJS with Peer5 for HLS integration
 
 <br>
 ![](./images/videojs.png)
@@ -9,12 +9,12 @@ The integration with Peer5 plugin is as easy as it can get.
 
 In addition to the player script, include Peer5 client and VideoJS plugin.
  
-Peer5 client and plugins scripts
+## Peer5 client and plugins scripts
 
      <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
      <script src="//api.peer5.com/peer5.videojs5.hlsjs.plugin.js">
     
-**Complete Example** 
+## Complete Example 
  
 The following information needs to be filled according to your actual data:
  
@@ -47,3 +47,6 @@ The following information needs to be filled according to your actual data:
     </body>
     </html>
 ```
+
+
+visit [here](http://docs.videojs.com/) for the full VideoJS docs

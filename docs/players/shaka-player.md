@@ -1,17 +1,17 @@
-# Boosting Shaka Player with Peer5
+# Shaka Player with Peer5 for DASH integration
 
 ![](./images/shaka-player.png)
 
-[Shaka Player](https://github.com/google/shaka-player) is a free and open source HTML5 video player that supports playing [DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) without any plugin.
+[Shaka Player](https://github.com/google/shaka-player) is a free and open source HTML5 video player that supports playing [MPEG-DASH](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP) without any plugin.
 
 The integration with Peer5 plugin is as easy as it can get.
  
-Peer5 client and player scripts
+## Peer5 client and player scripts
 
     <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
     <script src="//api.peer5.com/peer5.shakaplayer.js"></script>
     
-**Complete Example** 
+## Complete Example 
  
 The following information needs to be filled according to your actual data:
  
@@ -43,3 +43,5 @@ The following information needs to be filled according to your actual data:
     </body>
     </html>
 ```
+
+visit [here](https://github.com/google/shaka-player) for the full Shaka Player docs
