@@ -49,4 +49,4 @@ The following information needs to be filled according to your actual data:
 ```
 
 
-visit [here](http://docs.videojs.com/) for the full VideoJS docs
+Visit the the full VideoJS docs [here](http://docs.videojs.com/)
