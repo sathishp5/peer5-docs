@@ -3,7 +3,7 @@
 Need extra help? <a href="javascript:Intercom('show')">Chat with us</a> or [send us an email](mailto:info@peer5.com)
 
 ## Is it possible to stream video from one peer to another without using a server?
-no. In order to use peer5, a proper HLS/DASH stream is needed - we recommend using wowza, red5 etc..  
+no. In order to use peer5, a proper HLS/DASH stream is needed - we recommend using [nimble](https://wmspanel.com/nimble)  
 as server software
 
 ---
@@ -23,7 +23,7 @@ it will not work since these are not valid streams.
 ## How do I setup an HLS/DASH stream
 In order to create an HLS/DASH stream you need to convert your `rtmp` or video file to the correct format.
 
-You can either use a paid service to convert and host the files for you such as:  
+You can either use a hosted service to convert and host the files for you such as:  
 
 - [akamai](https://www.akamai.com/)
 - [bitmovin](https://bitmovin.com/)
