@@ -33,7 +33,7 @@ Or contact us if our current solutions doesn't fit your needs
 Depending on the software you are using, You may need to configure additional CORS headers.  
 you can test your playlist file [here](https://app.peer5.com/integration)
  
-#### Recommendations
+## Optimizing Stream for efficient P2P
 
 In order to achieve higher p2p throughput, we recommend the following configurations:
 

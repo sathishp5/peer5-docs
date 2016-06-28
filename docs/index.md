@@ -2,7 +2,9 @@
 
 ## Peer5 docs
 
-- [**Overview**](overview)
+- **Getting Started**
+    - [Overview of Peer5](overview)
+    - [Optimizing Stream for efficient P2P](https://docs.peer5.com/overview/#Optimizing Stream for efficient P2P)
 - **Players**
     - [Clapper](players/clappr/)
     - [VideoJS](players/videojs/)
