@@ -2,7 +2,9 @@
 
 ## Peer5 docs
 
-- [**Overview**](overview)
+- **Getting Started**
+    - [Overview of Peer5](overview)
+    - [Optimizing HLS Streams for efficient P2P](https://docs.peer5.com/overview/#recommendations)
 - **Players**
     - [Clapper](players/clappr/)
     - [VideoJS](players/videojs/)
