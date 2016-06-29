@@ -42,10 +42,7 @@ The following information needs to be filled according to your actual data:
         <div id="player"></div>
         <script>
             var player = jwplayer('player').setup({
-                playlist: [{
-                    file: 'MANIFEST_FILE',
-                    provider: '//api.peer5.com/jwplayer7/assets/flashls.provider.swf'
-                }]
+                file: 'MANIFEST_FILE'
             });
         </script>
     </body>
