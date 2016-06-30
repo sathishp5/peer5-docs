@@ -1,6 +1,10 @@
 site_name: Peer5 Docs
 theme_dir: 'cinder'
 repo_url: https://github.com/peer5/peer5-docs
+site_url: https://docs.peer5.com
+site_description: 'Peer5 documentation'
+site_favicon: favicon.ico
+google_analytics: ['UA-30916189-1', 'docs.peer5.com']
 pages:
 - Home: 'index.md'
 - Overview: 'overview.md'

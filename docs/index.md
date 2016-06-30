@@ -4,7 +4,8 @@
 
 - **Getting Started**
     - [Overview of Peer5](overview)
-    - [Optimizing Stream for efficient P2P](https://docs.peer5.com/overview/#optimizing-stream-for-efficient-p2p)
+    - [Optimizing Stream for efficient P2P](overview/#optimizing-stream-for-efficient-p2p)
+    - [F.A.Q](faq/)
 - **Players**
     - [Clapper](players/clappr/)
     - [VideoJS](players/videojs/)

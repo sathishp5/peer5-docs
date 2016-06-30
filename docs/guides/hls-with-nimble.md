@@ -1,7 +1,9 @@
 # HLS With Nimble
 
 ## Intro
-[Nimble Streamer](https://wmspanel.com/nimble) is a fantastic lightweight media server with its own live transcoder and WMSPanel web control UI. We are going to show how to configure Nimble and stream HLS with Peer5. The MPEG-DASH is set up the same way.
+[Nimble Streamer](https://wmspanel.com/nimble) is a fantastic lightweight media server
+with its own live (transcoder)[https://wmspanel.com/transcoder] and (WMSPanel)[https://wmspanel.com/admin_panel] web control UI.
+We are going to show how to configure Nimble and stream HLS with Peer5. The MPEG-DASH is set up the same way.
 
 Prior to following this article, please install Nimble Streamer on any supported OS.
 

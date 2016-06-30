@@ -47,3 +47,12 @@
     }(e, t, e[r] || [], '//bo.getjaco.com/build/recorder.js')
 }(window, document);
 window.JacoRecorder.init('4bba8cf4-2bc3-4583-88cf-212c11e7ce65', {});
+
+// auto focus on search input
+$(document).ready(function() {
+    $("[data-target='#mkdocs_search_modal']").click(function(e) {
+        setTimeout(function () {
+            $("#mkdocs-search-query").focus()
+        }, 0)
+    });
+});
