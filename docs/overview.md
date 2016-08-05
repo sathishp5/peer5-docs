@@ -19,7 +19,7 @@ Since Peer5 is SaaS and uses only Javascript, the integration is seamless to the
 Client side integration depends on the player you are using. and usually means adding one or two lines of code to your page.  
 we support many common such as:
 
-- [Clapper](players/clappr/)
+- [Clappr](players/clappr/)
 - [VideoJS](players/videojs/)
 - [JWPlayer](players/jwplayer-7/)
 - [Shaka Player](players/shaka-player/)
