@@ -7,7 +7,7 @@
     - [Optimizing Stream for efficient P2P](overview/#optimizing-stream-for-efficient-p2p)
     - [F.A.Q](faq/)
 - **Players**
-    - [Clapper](players/clappr/)
+    - [Clappr](players/clappr/)
     - [VideoJS](players/videojs/)
     - [JWPlayer](players/jwplayer-7/)
     - [Shaka Player](players/shaka-player/)
