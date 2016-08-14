@@ -36,6 +36,12 @@ or use self hosted media servers such as:
 - [nimble](https://wmspanel.com/nimble)
 - [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module)
  
- ---
+---
+
+## How do I disable Peer5 on a specific page?
+In order to disable the Peer5 technology for specific pages,<br>
+you can use our Javascript API to [disable](http://localhost:8000/guides/configuring-peer5/#disabling-p2p) and [enable](http://localhost:8000/guides/configuring-peer5/#enabling-p2p) Peer5.
  
- Need extra help? <a href="javascript:Intercom('show')">Chat with us</a> or [send us an email](mailto:info@peer5.com)
+---
+
+Need extra help? <a href="javascript:Intercom('show')">Chat with us</a> or [send us an email](mailto:info@peer5.com)

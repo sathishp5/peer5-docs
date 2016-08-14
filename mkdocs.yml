@@ -19,3 +19,4 @@ pages:
     - 'How to optimize Wowza server': 'guides/how-to-optimize-wowza-server.md'
     - 'Setting up HLS live streaming server using NGINX': 'guides/setting-up-hls-live-streaming-server-using-nginx.md'
     - 'Configure CORS headers': 'guides/cors.md'
+    - 'Configuring the Peer5 libarary': 'guides/configuring-peer5.md'
