@@ -1,10 +1,11 @@
 ## Configuring Peer5
  
-Peer5 has a javascript API for configuring different parameters of the library.
+Peer5 has a client-side Javascript API for configuring different parameters of the library.
 
 ### Disabling P2P
 
-If, for some reason, you want to disable P2P requests for a given session, you can do it with the following code:
+When Peer5 is loaded, it has P2P enabled by default.
+If, for some reason, you want to disable P2P requests for a given user session, you can do it with the following code:
 
 ```javascript
 peer5.configure({
@@ -12,11 +13,11 @@ peer5.configure({
 });
 ```
 
-Any requests made using `peer5.Request` after disabling P2P will use native XMLHttpRequest.
+Any requests made using `peer5.Request` after disabling P2P will use XMLHttpRequest to fetch the file from the HTTP server.
 
 ### Enabling P2P
 
-When you want to enable P2P requests you can easily do it with the following code:
+To re-enable P2P requests, you need to call configure with `{p2p:true}`:
 
 ```javascript
 peer5.configure({
