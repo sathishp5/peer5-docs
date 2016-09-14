@@ -8,12 +8,12 @@ This API is especially usable if you'd like to merge peer5's analytics into your
 /**
 * 
 * @returns {{
-  load.end:{array},
-  rebuffer.end:{array},
-  seek.end:{array},
-  numOfPeers:{Number},
-  totalHttpDownloaded:{Number},
-  totalP2PDownloaded: {Number}
+  load.end:{number[]},
+  rebuffer.end:{number[]},
+  seek.end:{number[]},
+  numOfPeers:{number},
+  totalHttpDownloaded:{number},
+  totalP2PDownloaded: {number}
 }}
 */
 peer5.getStats();
@@ -21,26 +21,26 @@ peer5.getStats();
 
 ## Video loading time
 
-The amount of time a video took to start playing first frame since the player was ready.
+The amount of time a video took to start playing first frame since the player initiated playback logic.
 
 ```javascript
 /**
 *
-* @returns {array} of Number of miliseconds
+* @returns {number[]} - array of durations in miliseconds
 */
 peer5.getStats()['load.end'];
 ```
 
 Usually the array will be of length 1, if there were several videos loading at the same page it can be higher than 1.
 
-## Video rebufferings
+## Video rebuffering
 
 Get the duration of rebuffer events that took place in the session. 
 
 ```javascript
 /**
 *
-* @returns {array} of Number of miliseconds
+* @returns {number[]} - array of durations in miliseconds
 */
 peer5.getStats()['rebuffer.end'];
 ```
@@ -49,12 +49,12 @@ Each element in the array represents the duration in milliseconds of a rebuffer 
 
 ## Video seeks
 
-Get the duration of seeks events that took place in the session.
+Get the duration of seek events that took place in the session.
 
 ```javascript
 /**
 *
-* @returns {array} of Number Of miliseconds
+* @returns {number[]} - array of durations in miliseconds
 */
 peer5.getStats()['seek.end']
 ```
@@ -73,7 +73,7 @@ Get the number of peers currently connected to the client.
 peer5.getStats().numOfPeers;
 ```
 
-Note: this metric is not aggregative, but represents the current state.
+Note: this metric is not aggregated, but represents the current state.
 
 ## HTTP data
 
