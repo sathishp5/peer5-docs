@@ -1,18 +1,18 @@
 # Stats API
 
-Peer5 enables monitoring statistics from the client side, using this API.
-You'll be able to receive various metrics relating to the performance of the p2p network, and the video playback.  
+Peer5 provides live statistics through a javascript SDK.
+Using this API you'll be able to receive various metrics relating to the performance of the p2p network, and the video playback.  
 This API is especially usable if you'd like to merge peer5's analytics into your own analytics flow.
 
 ```javascript
 /**
 * 
 * @returns {{
-  load.end:{number[]},
-  rebuffer.end:{number[]},
-  seek.end:{number[]},
-  numOfPeers:{number},
-  totalHttpDownloaded:{number},
+  load.end: {number[]},
+  rebuffer.end: {number[]},
+  seek.end: {number[]},
+  numOfPeers: {number},
+  totalHttpDownloaded: {number},
   totalP2PDownloaded: {number}
 }}
 */
@@ -31,7 +31,7 @@ The amount of time a video took to start playing first frame since the player in
 peer5.getStats()['load.end'];
 ```
 
-Usually the array will be of length 1, if there were several videos loading at the same page it can be higher than 1.
+Usually the array will have 1 item. But if there were several videos loading at the same page it can be higher than 1.
 
 ## Video rebuffering
 
