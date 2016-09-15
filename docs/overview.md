@@ -123,5 +123,5 @@ Peer5 is extremely UX focused, and for that reason, we only enable the download 
  We do this in order to optimize streams and minimize resource usage. 
 
 ## Stats API
-To monitor statistics from the client side, one can use peer5.getStats(),
+To monitor statistics from the client side, one can use [peer5.getStats()](./apis/get-stats.md),
  which returns a JSON object with different metrics relating to the performance of the p2p network.
