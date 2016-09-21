@@ -5,6 +5,15 @@
     margin-top:15px;
 }
 
+.nav-logo {
+    height: 35px;
+}
+
+.navbar-brand {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 @media (max-width: 991px) {
     .logo {
         margin-top: 70px;
