@@ -55,4 +55,8 @@ $(document).ready(function() {
             $("#mkdocs-search-query").focus()
         }, 0)
     });
+
+    var $navbarBrand = $('.navbar-brand');
+    $navbarBrand.html('<img class="nav-logo" src="https://www.peer5.com/images/logo.png">');
+    $navbarBrand.attr('href', '//www.peer5.com');
 });
