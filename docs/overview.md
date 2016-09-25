@@ -22,6 +22,7 @@ we support many common such as:
 - [Clappr](players/clappr/)
 - [VideoJS](players/videojs/)
 - [JWPlayer](players/jwplayer-7/)
+- [Flowplayer](players/flowplayer/)
 - [Shaka Player](players/shaka-player/)
 
 please visit [Our integration page](https://app.peer5.com/integration) for assistance

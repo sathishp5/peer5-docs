@@ -13,6 +13,7 @@ pages:
     - 'Clappr': 'players/clappr.md'
     - 'VideoJS': 'players/videojs.md'
     - 'JWPlayer': 'players/jwplayer-7.md'
+    - 'Flowplayer': 'players/flowplayer.md'
     - 'Shaka Player': 'players/shaka-player.md'
 - Guides:
     - 'HLS with Nimble': 'guides/hls-with-nimble.md'

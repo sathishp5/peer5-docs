@@ -4,10 +4,11 @@
 <br><br>
 [Clappr](http://clappr.io/) is a free and open source HTML5 video player that supports HLS.
 
-The integration with Peer5 plugin is easy and involves few lines of Javascript.
+The integration with Peer5 plugin is easy and involves two lines of code.
 In addition to the player script, include Peer5 client and the Clappr plugin.
  
 ## Peer5 client and plugins scripts
+add these two scripts to the `head` of your player's page
 
      <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
      <script src="//api.peer5.com/peer5.clappr.plugin.js"></script>
@@ -25,14 +26,12 @@ The following information needs to be filled according to your actual data:
     <head>
         <meta charset="UTF-8">
         <title>Clappr Player test</title>
-        <!-- peer5 client library -->
+        <!-- peer5 client & plugin -->
         <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-        
-        <!-- clappr - can be changed to your self hosted script -->
-        <script src="//api.peer5.com/clappr.js"></script>
-        
-        <!-- peer5 plugin for clappr -->
         <script src="//api.peer5.com/peer5.clappr.plugin.js"></script>
+        
+        <!-- clappr script -->
+        <script src="//cdn.clappr.io/latest/clappr.js"></script>
     </head>
     <body>
         <div id="player"></div>
