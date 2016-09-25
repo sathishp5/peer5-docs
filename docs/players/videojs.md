@@ -33,7 +33,7 @@ The following information needs to be filled according to your actual data:
         <script src="//api.peer5.com/peer5.videojs5.plugin.js"></script>
         
         <!-- videojs5 scripts & styles -->
-        <link href="//vjs.zencdn.net/5.11.6/video-js.css" rel="stylesheet" />
+        <link href="//vjs.zencdn.net/5.11.6/video-js.css" rel="stylesheet">
         <script src="//vjs.zencdn.net/5.11.6/video.js"></script>
         
     </head>

@@ -32,7 +32,7 @@ The following information needs to be filled according to your actual data:
 
         <!-- Flowplayer scripts & styles -->
         <script src="//releases.flowplayer.org/6.0.5/flowplayer.min.js"></script>
-        <link href="//releases.flowplayer.org/6.0.5/skin/minimalist.css" rel="stylesheet" />
+        <link href="//releases.flowplayer.org/6.0.5/skin/minimalist.css" rel="stylesheet">
     </head>
     <body>
         <div id="player"></div>
