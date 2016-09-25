@@ -181,25 +181,28 @@ http {
 
 ## 3. Start nginx
 
+the nginx binary is located where ever you compiled it to - `/usr/local/nginx/sbin/nginx` by default.
+change it to reflect your path.
+
 Test the configuration file
 
-    nginx -t
+    /usr/local/nginx/sbin/nginx -t
 
 Start nginx in the background
 
-    nginx
+    /usr/local/nginx/sbin/nginx
     
 Start nginx in the foreground
 
-    nginx -g 'daemon off;'
+    /usr/local/nginx/sbin/nginx -g 'daemon off;'
     
 Reload the config on the go
 
-    nginx -t && nginx -s reload
+    /usr/local/nginx/sbin/nginx -t && nginx -s reload
 
 Kill nginx
     
-    nginx -s stop
+    /usr/local/nginx/sbin/nginx -s stop
 
 
 ## 4. Pushing live stream to nginx using rtmp

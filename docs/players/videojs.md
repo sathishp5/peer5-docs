@@ -10,9 +10,10 @@ The integration with Peer5 plugin is as easy as it can get.
 In addition to the player script, include Peer5 client and VideoJS plugin.
  
 ## Peer5 client and plugins scripts
+add these two scripts to the `head` of your player's page
 
      <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-     <script src="//api.peer5.com/peer5.videojs5.hlsjs.plugin.js">
+     <script src="//api.peer5.com/peer5.videojs5.plugin.js">
     
 ## Complete Example 
  
@@ -27,15 +28,14 @@ The following information needs to be filled according to your actual data:
     <head>
         <meta charset="UTF-8">
         <title>VideoJS Player test</title>
-        <!-- peer5 client library -->
+        <!-- peer5 client & plugin -->
         <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+        <script src="//api.peer5.com/peer5.videojs5.plugin.js">
         
-        <!-- videojs5 scripts - You can change to your self hosted scripts -->
-        <link rel="stylesheet" href="//api.peer5.com/videojs5/assets/video-js.min.css">
-        <script src="//api.peer5.com/videojs5.js"></script>
+        <!-- videojs5 scripts & styles -->
+        <link href="//vjs.zencdn.net/5.11.6/video-js.css" rel="stylesheet">
+        <script src="//vjs.zencdn.net/5.11.6/video.js"></script>
         
-        <!-- peer5 plugin for videojs5 -->
-        <script src="//api.peer5.com/peer5.videojs5.hlsjs.plugin.js">
     </head>
     <body>
         <video id="player" class="video-js vjs-default-skin" height="360" width="640" controls preload="none">

@@ -6,10 +6,11 @@
     - [Overview of Peer5](overview)
     - [Optimizing Stream for efficient P2P](overview/#optimizing-stream-for-efficient-p2p)
     - [F.A.Q](faq/)
-- **Players**
+- **Players Integration**
     - [Clappr](players/clappr/)
     - [VideoJS](players/videojs/)
     - [JWPlayer](players/jwplayer-7/)
+    - [Flowplayer](players/flowplayer/)
     - [Shaka Player](players/shaka-player/)
 - **Guides**
     - [HLS with Nimble](guides/hls-with-nimble/)

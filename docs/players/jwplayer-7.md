@@ -5,10 +5,10 @@
 [JWPlayer 7](https://www.jwplayer.com/) is a feature rich video player that supports HLS.
 
 The integration with Peer5 plugin is as easy as it can get.
-
 In addition to the player script, include Peer5 client and JWPlayer plugin.
  
 ## Peer5 client and plugins scripts
+add these two scripts to the `head` of your player's page
 
      <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
      <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
@@ -27,14 +27,13 @@ The following information needs to be filled according to your actual data:
     <head>
         <meta charset="UTF-8">
         <title>JW7 Player test</title>
-        <!-- peer5 client library -->
+        <!-- peer5 client & plugin -->
         <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+        <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
         
         <!-- jwplayer7 - You can change to your self hosted script -->
-        <script src="//api.peer5.com/jwplayer7.js"></script>
-        
-        <!-- peer5 plugin for jwplayer7 -->
-        <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
+        <script src="//ssl.p.jwpcdn.com/player/v/7.6.0/jwplayer.js"></script>
+                
         <!-- jwplayer7 license key -->
         <script>jwplayer.key = 'JWPLAYER_KEY';</script>
     </head>
