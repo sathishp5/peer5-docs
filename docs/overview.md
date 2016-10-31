@@ -1,8 +1,8 @@
 # Peer5 Video Overview
 
-Peer5 operates as a service that orchestrates peers, and provides analytics and control.
+Peer5 operates as a service that orchestrates peers and provides analytics and control.
 The service is activated using our Javascript API in the browser.
-The client side consists of a custom [WebRTC](http://webtrc.org) p2p logic,
+The client side consists of custom [WebRTC](http://webtrc.org) p2p logic,
 an HTTP client and a delivery manager that optimizes speed using the two methods ([P2P](https://en.wikipedia.org/wiki/Peer-to-peer) and HTTP).
 
 The client connects to multiple peers and to the HTTP server simultaneously and ensures chunks are received in time for playback. 
@@ -14,10 +14,10 @@ The client connects to multiple peers and to the HTTP server simultaneously and 
 Since Peer5 is SaaS and uses only Javascript, the integration is seamless to the end-user and only requires a small change in your site's HTML page.
 
 
-### Client Side Integration
+### Client-Side Integration
 
-Client side integration depends on the player you are using. and usually means adding one or two lines of code to your page.  
-we support many common such as:
+Client-side integration depends on the player you are using and usually means adding one or two lines of code to your page.  
+We support many common players, such as:
 
 - [Clappr](players/clappr/)
 - [VideoJS](players/videojs/)
@@ -25,14 +25,14 @@ we support many common such as:
 - [Flowplayer](players/flowplayer/)
 - [Shaka Player](players/shaka-player/)
 
-please visit [Our integration page](https://app.peer5.com/integration) for assistance
-Or contact us if our current solutions doesn't fit your needs
+Please visit [Our integration page](https://app.peer5.com/integration) for assistance 
+or contact us if our current solution doesn't fit your needs.
 
 
 ### Server Side Requirements
 
-Depending on the software you are using, You may need to configure additional CORS headers.  
-you can test your playlist file [here](https://app.peer5.com/integration)
+Depending on the software you are using, you may need to configure additional CORS headers.  
+You can test your playlist file [here](https://app.peer5.com/integration)
  
 ## Optimizing Stream for efficient P2P
 
@@ -45,26 +45,26 @@ In order to achieve higher p2p throughput, we recommend the following configurat
 To identify media files and connect users, we use the url without a querystring by default. 
 
 **Example I:** user A gets 1.ts?id=xyz and user B gets 1.ts?id=abc  
-We will be remove the dynamic URL and will be able to connect between users
+We will remove the dynamic URL and will be able to connect between users.
 
 **Example II:** user A gets xyz/1.ts and user B gets abc/1.ts  
 In this case, we will not be able to identify the files correctly by default. This requires additional configuration.
 	
-Our system can digest different randomized URLs using custom regex that you can setup - please contact us if your URLs contain random text other than a query string
+Our system can digest different randomized URLs using custom regex that you can setup - please contact us if your URLs contain random text other than query strings.
 
 
 ## Security
 
 Peer5 uses WebRTC to transfer data between users. The channel we use is secured using SCTP protocols and TLS encryption.
-Communication with our backend is done via secured WebSocket, which also use TLS encryption.
+Communication with our backend is done via secured WebSocket, which also uses TLS encryption.
 
 Existing content protection schemes remain the same when Peer5 is enabled. Each user session starts with a standard client-server,
 manifest request and media request. The p2p aspect only starts to work after the user is authorized.
-The server sees the same exact requests (tokens, keys, cookie, etc.) with and without Peer5.
+The server sees the same exact requests (tokens, keys, cookies, etc.) with and without Peer5.
 
 **DRM and stream encryption** doesn't interfere with Peer5's technology, since the content sent 
 between users is still the same when encrypted. The Peer5 service doesn't compromise the stream in any way,
-since users that view the stream have already been authenticated by the server, and have received a decryption key - which,
+since users that view the stream have already been authenticated by the server and have received a decryption key - which,
 importantly, isn't transferred through the Peer5 network. Content is also never stored locally or in any persistent data storage.
 
 ## User Experience
@@ -81,13 +81,13 @@ and illustrates how Peer5 divides the buffer into a critical portion and a prefe
 
 Without Peer5, all segments are fetched via HTTP (blue squares).
 
-With Peer5, one can see hybrid delivery in action as evidenced by the presence of 
+With Peer5, one can see hybrid delivery in action, as evidenced by the presence of 
 orange squares (i.e. segments fetched via p2p) in the prefetch portion of the buffer.
 Because we use HTTP delivery to fill the critical portion of the buffer,
 one can see that Peer5 doesn't add any delay to the playback experience.  
 Once the critical portion is filled, however, Peer5 leverages p2p delivery to dramatically 
 reduce HTTP traffic yet still stay ahead of the player. Small video segments allow for more diversified 
-delivery and this is the primary reason we recommend configuring your streaming server to output 
+delivery, and this is the primary reason we recommend configuring your streaming server to output 
 many small segments rather than a small number of large segments.
 
 In cases where the end-user can't fetch segments via HTTP fast enough to fill the critical portion of the buffer,
@@ -106,10 +106,10 @@ Peer Efficiency depends on many factors, including the quality of end-users' Int
 network proximity, and more. One of the most important factors is the number of concurrent users.
 Although Peer5 is most efficient for very popular content, we see excellent offloading ratios even
 when there is a small number of concurrent viewers. In fact, we have achieved 50% peer efficiency with only 5 concurrent viewers.
-This means that even non highly popular content can be efficiently delivered with Peer5.
+This means that even less popular content can be efficiently delivered with Peer5.
 
 ## Adaptive Bitrate (ABR)
-Peer5 supports adaptive bitrate technologies, but does not interfere with them. 
+Peer5 supports adaptive bitrate technologies but does not interfere with them. 
 The prefetcher requests segments from the same rendition (level) it currently resides in.
 Peers from different renditions do not share segments with each other.
 
@@ -120,7 +120,7 @@ Peer5 operates with complete p2p functionality on Chrome, Firefox and Opera.
  Other browsers gracefully fallback to an HTTP only mode, where servers deliver all of the content.
 
 ### # Mobile
-Peer5 is extremely UX focused, and for that reason, we only enable the download of content on mobile (i.e., no upload).
+Peer5 is extremely UX focused, and for that reason, on mobile, we only enable content download (i.e., not upload).
  We do this in order to optimize streams and minimize resource usage. 
 
 ## Stats API
