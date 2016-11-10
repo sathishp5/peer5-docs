@@ -12,6 +12,7 @@
     - [JWPlayer](players/jwplayer-7/)
     - [Flowplayer](players/flowplayer/)
     - [Shaka Player](players/shaka-player/)
+    - [Kaltura](players/kaltura/)
 - **Guides**
     - [HLS with Nimble](guides/hls-with-nimble/)
     - [How to optimize Wowza server](guides/how-to-optimize-wowza-server/)

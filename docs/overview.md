@@ -24,6 +24,7 @@ We support many common players, such as:
 - [JWPlayer](players/jwplayer-7/)
 - [Flowplayer](players/flowplayer/)
 - [Shaka Player](players/shaka-player/)
+- [Kaltura](players/kaltura/)
 
 Please visit [Our integration page](https://app.peer5.com/integration) for assistance 
 or contact us if our current solution doesn't fit your needs.
