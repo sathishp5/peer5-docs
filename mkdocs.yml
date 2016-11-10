@@ -15,6 +15,7 @@ pages:
     - 'JWPlayer': 'players/jwplayer-7.md'
     - 'Flowplayer': 'players/flowplayer.md'
     - 'Shaka Player': 'players/shaka-player.md'
+    - 'Kaltura': 'players/kaltura.md'
 - Guides:
     - 'HLS with Nimble': 'guides/hls-with-nimble.md'
     - 'How to optimize Wowza server': 'guides/how-to-optimize-wowza-server.md'
