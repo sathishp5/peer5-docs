@@ -33,6 +33,7 @@ VideoJS v4          | Yes               | Yes               | No                
 VideoJS v5          | Yes               | no                | Yes               | **no**            | see [VideoJS5 tuning](#videojs5-tuning)
 Flowplayer(html5)   | Yes               | Yes               | Yes(plugin)       | **yes**           | see [Flowplayer tuning](#flowplayer-tuning)
 Kaltura             | Yes               | no                | Yes(plugin)       | **yes**           | see [Kaltua tuning](#kaltura-tuning)
+MediaElement.js     | Yes               | Yes               | No                | **yes**           | html5 supported in yet-released [v3](https://github.com/johndyer/mediaelement/tree/3.x-dev)
 
 
 ### JWPlayer7 Tuning
