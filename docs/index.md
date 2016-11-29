@@ -19,3 +19,4 @@
     - [Setting up HLS live streaming server using NGINX](guides/setting-up-hls-live-streaming-server-using-nginx/)
     - [Setting up CORS](guides/cors/)
     - [Configuring Peer5](guides/configuring-peer5/)
+    - [Migrate From Flash](guides/migrate-from-flash/)

@@ -22,5 +22,6 @@ pages:
     - 'Setting up HLS live streaming server using NGINX': 'guides/setting-up-hls-live-streaming-server-using-nginx.md'
     - 'Configure CORS headers': 'guides/cors.md'
     - 'Configuring the Peer5 libarary': 'guides/configuring-peer5.md'
+    - 'Migrate From Flash': 'guides/migrate-from-flash.md'
 - APIs:
     - 'stats': 'apis/get-stats.md'
