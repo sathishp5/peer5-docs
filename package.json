@@ -1,10 +1,10 @@
 {
   "name": "peer5-docs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A documentation repo using mkdocs theme with netlify",
   "scripts": {
     "watch": "mkdocs serve",
     "build": "mkdocs build --clean",
-    "setup-env": "sudo apt-get install -y pip && sudo pip install mkdocs"
+    "setup-env": "sudo apt-get install -y python-pip mkdocs && sudo pip install mkdocs"
   }
 }
