@@ -24,10 +24,10 @@ Player              | Flash playback    | Flash Is Default? | HTML5 playback    
 :-:                 | :-:               | :-:               | :-:               | :-:               | :--
 Clappr              | Yes(Plugin)       | no                | Yes               | **no**            | [Clappr Formats](https://github.com/clappr/clappr/blob/master/doc/SUPPORTED_FORMATS.md)
 JWPlayer v6.x       | Yes               | Yes               | No                | **yes**           | Upgrade to JWPlayer v7
-JWPlayer v7.x       | Yes               | Yes               | Yes               | **maybe**         | see [JWPlayer7 tuning](#jwplayer7-tuning)
+JWPlayer v7.x       | Yes               | Yes               | Yes               | **maybe**         | see [JWPlayer7 tuning](#jwplayer7-configuration)
 VideoJS v4          | Yes               | Yes               | No                | **yes**           | Upgrade to VideoJS5
-VideoJS v5          | Yes               | no                | Yes               | **no**            | see [VideoJS5 tuning](#videojs5-tuning)
-Flowplayer(html5)   | Yes               | Yes               | Yes(plugin)       | **yes**           | see [Flowplayer tuning](#flowplayer-tuning)
+VideoJS v5          | Yes               | no                | Yes               | **no**            | see [VideoJS5 tuning](#videojs5-configuration)
+Flowplayer(html5)   | Yes               | Yes               | Yes(plugin)       | **yes**           | see [Flowplayer tuning](#flowplayer-configuration)
 Kaltura             | Yes               | no                | Yes               | **no**            |
 MediaElement.js     | Yes               | Yes               | No                | **yes**           | html5 supported in not yet released [v3](https://github.com/johndyer/mediaelement/tree/3.x-dev)
 
