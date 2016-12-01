@@ -46,9 +46,9 @@ To configure JWPlayer v7 to use HTML5 by default, add the following config tags 
 
 ### VideoJS5 Configuration
 
-VideoJS v5 needs a plugin to play HLS. If you are using either one of these, then you are already using HTML5-based playback
-- https://github.com/Peer5/videojs-contrib-hls.js
-- https://github.com/videojs/videojs-contrib-hls
+VideoJS v5 needs a plugin to play HLS. If you are using a plugin such as the one below, then you are already using HTML5-based playback
+
+- [https://github.com/Peer5/videojs-contrib-hls.js](https://github.com/Peer5/videojs-contrib-hls.js)
 
 ### Flowplayer Configuration
 
