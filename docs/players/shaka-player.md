@@ -9,7 +9,7 @@ The integration with Peer5 plugin is as easy as it can get.
 ## Peer5 client and player scripts
 
     <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-    <script src="//api.peer5.com/peer5.shakaplayer.js"></script>
+    <script src="//api.peer5.com/peer5.shakaplayer.plugin.js"></script>
     
 ## Complete Example 
  
@@ -19,29 +19,33 @@ The following information needs to be filled according to your actual data:
 - `MANIFEST_FILE` &nbsp;&nbsp;url to your `.mpd` file
   
 ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Shaka Player Player test</title>
-        <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-        <script src="//api.peer5.com/peer5.shakaplayer.js"></script>
-    </head>
-    <body>
-        <video id="player" width="640" height="360" crossorigin="anonymous" controls autoplay>
-            Your browser does not support HTML5 video.
-        </video>
-        <script>
-            var stream = 'MANIFEST_FILE';
-            shaka.polyfill.installAll();
-            var videoEl = document.getElementById('player');
-            var player = new shaka.player.Player(videoEl);
-            var estimator = new shaka.util.EWMABandwidthEstimator();
-            var source = new shaka.player.DashVideoSource(stream, null, estimator);
-            player.load(source);
-        </script>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Peer5 Demo</title>
+    <!-- peer5 client & plugin-->
+    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+    <script src="//api.peer5.com/peer5.shakaplayer.plugin.js"></script>
+    <!-- shakaplayer script-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/shaka-player/2.0.1/shaka-player.compiled.js"></script>
+  </head>
+  <body>
+    <video id="video" width="640" controls autoplay></video>
+    <script>
+      var video = document.getElementById('video');
+      window.shaka.polyfill.installAll();
+
+      if (!shaka.Player.isBrowserSupported()) {
+          parentEl.innerHTML = 'Shaka player is not supported in this browser';
+      }
+      else {
+          var player = new shaka.Player(video);
+          player.load("MANIFEST_FILE");
+      }
+    </script>
+  </body>
+</html>
 ```
 
 visit [here](https://github.com/google/shaka-player) for the full Shaka Player docs
