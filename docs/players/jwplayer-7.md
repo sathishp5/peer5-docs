@@ -22,30 +22,51 @@ The following information needs to be filled according to your actual data:
 - `MANIFEST_FILE` &nbsp;&nbsp;url to your `.m3u8` file
   
 ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>JW7 Player test</title>
-        <!-- peer5 client & plugin -->
-        <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
-        <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
-        
-        <!-- jwplayer7 - You can change to your self hosted script -->
-        <script src="//ssl.p.jwpcdn.com/player/v/7.6.0/jwplayer.js"></script>
-                
-        <!-- jwplayer7 license key -->
-        <script>jwplayer.key = 'JWPLAYER_KEY';</script>
-    </head>
-    <body>
-        <div id="player"></div>
-        <script>
-            var player = jwplayer('player').setup({
-                file: 'MANIFEST_FILE'
-            });
-        </script>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JW7 Player test</title>
+    <!-- peer5 client & plugin -->
+    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+    <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
+
+    <!-- jwplayer7 - You can change to your self hosted script -->
+    <script src="//ssl.p.jwpcdn.com/player/v/7.6.0/jwplayer.js"></script>
+
+    <!-- jwplayer7 license key -->
+    <script>jwplayer.key = 'JWPLAYER_KEY';</script>
+</head>
+<body>
+    <div id="player"></div>
+    <script>
+        var player = jwplayer('player').setup({
+            file: 'MANIFEST_FILE'
+        });
+    </script>
+</body>
+</html>
+```
+
+## Complete Example With JW Cloud Platform
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JW7 Player test</title>
+    <!-- peer5 client & plugin -->
+    <script src="//api.peer5.com/peer5.js?id=PEER5_API_KEY"></script>
+    <script src="//api.peer5.com/peer5.jwplayer7.plugin.js"></script>
+</head>
+<body>
+    <div>
+        <!-- JWPlayer cloud platform script -->
+        <script src="//content.jwplatform.com/players/abcd-efghij12.js"></script>
+    </div>
+</body>
+</html>
 ```
 
 visit [here](https://developer.jwplayer.com/jw-player/) for the full JWPlayer docs
