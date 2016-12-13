@@ -7,9 +7,7 @@ If you use Google Tag Manager (GTM) follow one of these methods to integrate Pee
 Since scripts are loaded asynchronously its important to initiate player only after peer5 scripts have been loaded.
 jwplayer is used through out the examples, but the methods apply to all players
 
-## 1. Initiate player in external script
-
-The player is initiate in an external script that is loaded after peer5 scripts. 
+## 1. Create player in external script
 
 player.js
 ```

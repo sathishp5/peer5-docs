@@ -1,11 +1,12 @@
-# Use NGINX As Warm Wowza Cache
+# Use NGINX As Wowza Cache
 
-Wowza server can both transcode and serve you HLS/DASH stream,
-but sometimes serving the files is done through other servers  
-in order increase the amount of users that your servers can serve.
-So instead of transcoding the stream multiple times, one server can generate the stream and the content can be served through caching servers.
+Wowza server can both transcode and serve your HLS/DASH stream,  
+but sometimes serving the files to many users from the origin itself can overload the Wowza server,
+which is already busy transcoding the video.
+In order to increase the amount of users that you can serve, a common approach is to setup cache servers (one or more)
+to reduce the load of serving the files from the Wowza server to the cache servers.
 
-In this guide we will use Ubuntu server with nginx as a warm cache for wowza.
+In this guide we will use Ubuntu servers with nginx as a warm cache for Wowza.
 
 
 ## Example setup
@@ -172,17 +173,15 @@ http {
 }
 ```
 
-**NOTE: Did you update you wowza ip address? if not go back and update it**
+**NOTE: Did you update your Wowza actual ip address? if not go back and update it**
 <br>
 <br>
 
 after setting up the config we check that it's valid
 ```
-service nginx configtest
-```
-should output something like:
-```
-* Testing nginx configuration                   \[ OK ]
+$ nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 
 
