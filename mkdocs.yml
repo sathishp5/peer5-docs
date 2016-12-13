@@ -23,5 +23,7 @@ pages:
     - 'Configure CORS headers': 'guides/cors.md'
     - 'Configuring the Peer5 libarary': 'guides/configuring-peer5.md'
     - 'Migrate From Flash': 'guides/migrate-from-flash.md'
+    - 'Use NGINX as warm Wowza cache': 'guides/use-nginx-as-warm-wowza-cache.md'
+    - 'Google Tag Manager': 'guides/google-tag-manager.md'
 - APIs:
     - 'stats': 'apis/get-stats.md'
