@@ -80,7 +80,8 @@ Here is a complete nginx config tuned for caching.
 Be sure to edit the upstream section to match your wowza server ip and port,
 multiple servers can be added - one per line (don't forget the semi-colon)
 
-replace `/etc/nginx.conf` completely with this
+replace `/etc/nginx/nginx.conf` completely with this  
+<small>(The config might be on `/usr/local/nginx/conf/nginx.conf` on certain platforms)</small>
 ```
 user nginx;
 worker_processes auto;
@@ -173,7 +174,8 @@ http {
 }
 ```
 
-**NOTE: Did you update your Wowza actual ip address? if not go back and update it**
+**NOTE: Did you update your Wowza actual ip address?  
+go up and search for '`# ADD YOUR SERVERS HERE`' comment**
 <br>
 <br>
 
