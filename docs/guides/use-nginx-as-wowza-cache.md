@@ -151,6 +151,8 @@ http {
     proxy_cache_lock on;
     proxy_cache_lock_age 5s;
     proxy_cache_lock_timeout 1h;
+    proxy_ignore_headers Cache-Control;
+    proxy_ignore_headers Set-Cookie;
 
     # default route
     server {
