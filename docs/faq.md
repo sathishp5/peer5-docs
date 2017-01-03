@@ -44,4 +44,19 @@ you can use our Javascript API to [disable](https://docs.peer5.com/guides/config
  
 ---
 
+## What are the supported Web Players?
+We support Jwplayer, Clappr, Flowplayer, Videojs, Kaltura. We do not support OSMF player and other flash oriented players. 
+
+---
+
+## How to play HLS in HTML5?
+The introduction of the video element in HTML5 means that it’s now possible to play video on the web without having to install plugins. However, not all browsers support the same video formats. The Media Source Extensions allows JavaScript applications to generate media streams dynamically for playback. 
+
+---
+
+## How do I add streams dynamically to Peer5 from my web application?
+You can simply add streams with CORS enabled to one of the Peer5 supported players and add Peer5 api javascript into the player code. That's all. 
+
+---
+
 Need extra help? <a href="javascript:Intercom('show')">Chat with us</a> or [send us an email](mailto:info@peer5.com)
